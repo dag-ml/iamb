@@ -1,0 +1,112 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO	NCIT		OBI	MESH	CRO	RBO
+Term Source File	http://data.bioontology.org/ontologies/EFO		http://purl.obolibrary.org/obo/ncit.owl	http://data.bioontology.org/ontologies/OBI			
+Term Source Version	132		18.10e	29			
+Term Source Description	Experimental Factor Ontology		NCI Thesaurus OBO Edition	Ontology for Biomedical Investigations			
+INVESTIGATION
+Investigation Identifier	
+Investigation Title	
+Investigation Description	
+Investigation Submission Date	
+Investigation Public Release Date	
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-608
+Study Title	Dose-dependent skeletal deficits due to varied reductions in mechanical loading in rats (Tibia - pQCT)
+Study Description	Reduced skeletal loading leads to marked bone loss. Animal models of hindlimb suspension are widely used to assess alterations in skeleton during the course of complete unloading. More recently, the effects of partial unloading on the musculoskeletal system have been interrogated in mice and rats, revealing dose-dependent effects of partial weight bearing (PWB) on the skeleton and skeletal muscle. Here, we extended these studies to determine the structural and functional skeletal alterations in 14-week-old male Wister rats exposed to 20%, 40%, 70%, or 100% of body weight for 1, 2, or 4 weeks (n  equals 11–12/group). Using in vivo pQCT, we found that trabecular bone density at the proximal tibia declined in proportion to the degree of unloading and continued progressively with time, without evidence of a plateau by 4 weeks. Ex vivo measurements of trabecular microarchitecture in the distal femur by microcomputed tomography revealed deficits in bone volume fraction, 2 and 4 weeks after unloading. Histologic analyses of trabecular bone in the distal femur revealed the decreased osteoblast number and mineralizing surface in unloaded rats. Three-point bending of the femoral diaphysis indicated modest or no reductions in femoral stiffness and estimated modulus due to PWB. Our results suggest that this rat model of PWB leads to trabecular bone deterioration that is progressive and generally proportional to the degree of PWB, with minimal effects on cortical bone. This study derives results from the pQCT assay using tibia tissue.
+Study Submission Date	25-Apr-2023
+Study Public Release Date	17-May-2023
+Study File Name	s_OSD-608.txt
+Comment[Acknowledgments]	
+Comment[Data Source Accession]	
+Comment[Data Source Link]	
+Comment[Experiment Platform]	Partial Weight Bearing
+Comment[Flight Program]	
+Comment[Funding]	2015-16 HERO NNJ15ZSA001N
+Comment[Managing NASA Center]	Ames Research Center (ARC)
+Comment[Mission End]	
+Comment[Mission Link]	
+Comment[Mission Name]	
+Comment[Mission Start]	
+Comment[Project Identifier]	
+Comment[Project Link]	https://nlsp.nasa.gov/view/lsdapub/lsda_experiment/a8be84ea-0eb6-5e55-b810-22af43943db7
+Comment[Project Title]	Musculoskeletal Response to a Partial-gravity Analog in Rats: Structural; Functional; and Molecular Alterations
+Comment[Project Type]	Ground Study
+Comment[Space Program]	NASA
+Comment[Study Grant Number]	
+STUDY DESIGN DESCRIPTORS
+Study Design Type
+Study Design Type Term Accession Number
+Study Design Type Term Source REF
+STUDY PUBLICATIONS
+Study PubMed ID	
+Study Publication DOI	10.1038/s41526-020-0105-0
+Study Publication Author List	Ko FC, Mortreux M, Riveros D, Nagy JA, Rutkove SB, Bouxsein ML.
+Study Publication Title	Dose-dependent skeletal deficits due to varied reductions in mechanical loading in rats
+Study Publication Status	Published
+Study Publication Status Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0001796
+Study Publication Status Term Source REF	
+STUDY FACTORS
+Study Factor Name	Partial Weight Bearing	Time
+Study Factor Type	Partial Weight-Bearing	time
+Study Factor Type Term Accession Number	http://purl.bioontology.org/ontology/MESH/D000093002	http://www.ebi.ac.uk/efo/EFO_0000721
+Study Factor Type Term Source REF	MESH	EFO
+STUDY ASSAYS
+Study Assay File Name	a_OSD-608_bone-microstructure_peripheral-quantitative-computed-tomography_xct research sa+(stratec).txt
+Study Assay Measurement Type	Bone Microstructure
+Study Assay Measurement Type Term Accession Number	http://purl.jp/bio/4/id/200906009687576300
+Study Assay Measurement Type Term Source REF	
+Study Assay Technology Type	Peripheral Quantitative Computed Tomography
+Study Assay Technology Type Term Accession Number	http://purl.obolibrary.org/obo/MMO_0000365
+Study Assay Technology Type Term Source REF	
+Study Assay Technology Platform	XCT Research SA+(Stratec)
+STUDY PROTOCOLS
+Study Protocol Name	pQCT Scan	Treatment Protocol	ALSDA Transformed Data
+Study Protocol Type	Scan	sample treatment protocol	data transformation
+Study Protocol Type Term Accession Number		http://www.ebi.ac.uk/efo/EFO_0003809	http://purl.obolibrary.org/obo/OBI_0200000
+Study Protocol Type Term Source REF		EFO	OBI
+Study Protocol Description	"At baseline and weekly thereafter, we assessed trabecular vBMD at the right proximal tibia and cortical vBMD at the tibial mid-diaphysis, using in vivo pQCT (Stratec, XCT Research SA+, Pforzheim, Germany). Scans were performed using a voxel size of 100 μm and a scanning beam thickness of 500 μm. Daily calibration was performed using a manufacturer-supplied hydroxyapatite phantom. Transverse images of right tibia were acquired at 5.0, 5.5, 6.0 mm (for total and trabecular vBMD), and at 20 and 20.5 mm (for cortical vBMD) from the proximal tibial plateau. During the scan, rats were under isoflurane-induced anesthesia.
+
+Longitudinal images were visually inspected, and matched based on the distance from the proximal tibial plateau and shape of the proximal tibial metaphysis and fibula to ensure anatomically consistent location for analysis. Scanned slices were analyzed using Stratec software (Stratec XCT Analysis System, v6.0, Norland Corp., Fort Atkinson, WI), using a standardized analysis to determine cortical (contour mode 1, peel mode 2, outer and inner threshold of 0.650 g/cm3) and trabecular (contour mode 3, peel mode 4, outer threshold of 0.450 g/cm3, inner threshold of 0.800 g/cm3) vBMD."	"Male Wistar rats (Charles River Laboratories Inc., Wilmington, MA, USA) weighing 408 ± 0.15 g (14 weeks of age) were obtained and housed in a temperature-controlled (22 ± 2 °C) room with a 12:12-h light–dark cycle. Water and chow were provided ad libitum. Throughout the experiment, rats were assessed daily for any signs of pain or discomfort (e.g., porphyrin staining around eyes, poor grooming, and/or hair loss), harness and jacket fitting, ability to walk and move across the cage, as well as food and water intake. All experimental protocols were approved by the Beth Israel Deaconess Medical Center Institutional Animal Care and Use Committee (IACUC) and animal experiments were conducted according to the guidelines of the IACUC.
+
+Animals were assigned to one of four groups: normal loading (PWB100), and 70% (PWB70), 40% (PWB40), and 20% (PWB20) of normal loading via quadrupedal suspension. These PWB groups were chosen to mimic gravitational forces on Earth (1 G), moderate artificial gravity (0.7 G), Mars (0.4 G), and Moon (0.2 G). Animals were assigned to experimental groups based on pre-PWB body weight to ensure similar average and variability in body weight across all groups. Groups were suspended for 1, 2, or 4 weeks (n  equals  11–12/group). Rats were assigned to each group to ensure balanced distribution of the body weight across all groups. After 2 days of acclimation in custom cages and jackets, rats were suspended according to their PWB groups. Rats were secured in a tether jacket and a pelvic harness and submitted to a two-point suspension allowing them to adopt a normal quadrupedal behavior, while weighing 100, 70, 40, or 20% of their body weight. Animals were weighed daily in their PWB apparatus and the chain link to the two-point suspension was adjusted if needed to ensure that their achieved unloading level remained constant based on PWB groups."	To enable maximal data reuse (for machine-readable approaches), the submitted version of this dataset was subsequently transformed and edited to be aligned with a reusable template, which was created through feedback provided by subject matter experts in the ALSDA Analysis Working Group. This transformed reusable version is structured so all results are standardized into specific rows (source/subject) and columns (measures). This enables all assay results to be identically structured for efficient data mining.
+Study Protocol URI			
+Study Protocol Version			
+Study Protocol Parameters Name	Was Subject Anesthetized;Anesthesia Method;Was Calibration Performed;What Calibration Was Performed;Scanner;Volume Of Interest;Volume Of Interest Size;Voxel Size;Volume of Interest;Volume of Interest Size;Raw Data File;Submitted Results File	light cycle;Anesthesia Method;Housing Temperature	Transformed Reusable Files
+Study Protocol Parameters Name Term Accession Number	;;;;;;;;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/	http://purl.obolibrary.org/obo/NCIT_C90419;https://osdr.nasa.gov/;https://osdr.nasa.gov/	https://osdr.nasa.gov/
+Study Protocol Parameters Name Term Source REF	;;;;;;;;NCIT;;;	NCIT;;	
+Study Protocol Components Name			
+Study Protocol Components Type			
+Study Protocol Components Type Term Accession Number			
+Study Protocol Components Type Term Source REF			
+STUDY CONTACTS
+Study Person Last Name	Ko	Mortreux	Riveros	Nagy	Rutkove	Bouxsein
+Study Person First Name	Frank C.	Marie	Daniela	Janice A.	Seward B.	Mary L.
+Study Person Mid Initials						
+Study Person Email					srutkove@bidmc.harvard.edu	mbouxsei@bidmc.harvard.edu
+Study Person Phone						
+Study Person Fax						
+Study Person Address						
+Study Person Affiliation					Harvard Medical School	Harvard Medical School
+Study Person Roles	Author	Author	Author	Author	conceptualization role	conceptualization role
+Study Person Roles Term Accession Number	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.org/credit/ontology	http://purl.org/credit/ontology
+Study Person Roles Term Source REF					CRO	CRO

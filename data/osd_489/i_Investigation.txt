@@ -1,0 +1,108 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO	NCIT	OBI	CREDIT	GLDS	MESH	RBO
+Term Source File	http://data.bioontology.org/ontologies/EFO		http://data.bioontology.org/ontologies/OBI		https://genelab-data.ndc.nasa.gov/		
+Term Source Version	132		29		1.0		
+Term Source Description	Experimental Factor Ontology		Ontology for Biomedical Investigations		User defined terms		
+INVESTIGATION
+Investigation Identifier	
+Investigation Title	
+Investigation Description	
+Investigation Submission Date	
+Investigation Public Release Date	
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-489
+Study Title	Quantifying Cancellous Bone Structural Changes in Microgravity: Axial Skeleton Results from the RR-1 Mission
+Study Description	Objective of this study was to further validate bone degradation in microgravity as site-specific and preferential to weight bearing bone. An objective of this study was to further understand the role of the mechanical environment in controlling the process of bone remodeling, namely local formation and resorption to maintain a healthy structure. These data from the lumbar 4 bones of Rodent Research-1 mission aboard the International Space Station, are unpublished, and were presented at the 2016 meeting of the American Society for Gravitational Space Research. This dataset derives results from the micro–computed tomography (mCT) assay.
+Study Submission Date	29-Mar-2022
+Study Public Release Date	13-Feb-2023
+Study File Name	s_OSD-489.txt
+Comment[Acknowledgments]	
+Comment[Data Source Accession]	ARC00XX146
+Comment[Data Source Link]	https://lsda.jsc.nasa.gov/Dataset/dataset_info/13380
+Comment[Experiment Platform]	Rodent Habitat
+Comment[Flight Program]	International Space Station (ISS)
+Comment[Funding]	This study was supported by the Space Life Sciences Training Program at NASA Ames Research Center and a Space Biology PECASE. We thank our colleagues in the Bone and Signaling Lab. Samples were solicited and procured through the NASA Ames Life Sciences Data Archive (now the NASA Biological Institutional Scientific Collection).
+Comment[Managing NASA Center]	Ames Research Center (ARC)
+Comment[Mission End]	25-Oct-2014
+Comment[Mission Link]	https://nlsp.nasa.gov/view/lsdapub/lsda_mission/IDP-LSDA_MISSION-0000000000000172
+Comment[Mission Name]	SpaceX-4
+Comment[Mission Start]	20-Sep-2014
+Comment[Project Identifier]	RR-1
+Comment[Project Link]	https://nlsp.nasa.gov/view/lsdapub/lsda_experiment/7633383e-fe88-5ada-92dd-cd31a50fda32
+Comment[Project Title]	Rodent Research 1
+Comment[Project Type]	Spaceflight Study
+Comment[Space Program]	NASA
+Comment[Study Grant Number]	Space Life Sciences Training Program at NASA Ames Research Center and a Space Biology PECASE
+STUDY DESIGN DESCRIPTORS
+Study Design Type	active dosimeter	low Earth orbit	space station	International Space Station
+Study Design Type Term Accession Number	http://purl.obolibrary.org/obo/RBO_00000011	http://purl.obolibrary.org/obo/RBO_00000019	http://purl.obolibrary.org/obo/RBO_00000046	http://purl.obolibrary.org/obo/RBO_00000034
+Study Design Type Term Source REF	RBO	RBO	RBO	RBO
+STUDY PUBLICATIONS
+Study PubMed ID
+Study Publication DOI
+Study Publication Author List
+Study Publication Title
+Study Publication Status
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF
+STUDY FACTORS
+Study Factor Name	Spaceflight
+Study Factor Type	Space Flight
+Study Factor Type Term Accession Number	http://purl.bioontology.org/ontology/MESH/D013026
+Study Factor Type Term Source REF	MESH
+STUDY ASSAYS
+Study Assay File Name	a_OSD-489_bone-microstructure_micro-computed-tomography_bruker skyscan.txt
+Study Assay Measurement Type	Bone Microstructure
+Study Assay Measurement Type Term Accession Number	http://purl.jp/bio/4/id/200906009687576300
+Study Assay Measurement Type Term Source REF	
+Study Assay Technology Type	Micro-Computed Tomography
+Study Assay Technology Type Term Accession Number	http://purl.obolibrary.org/obo/MMO_0000570
+Study Assay Technology Type Term Source REF	
+Study Assay Technology Platform	Bruker SkyScan
+STUDY PROTOCOLS
+Study Protocol Name	sample collection	Image Scan Acquisition	Animal Husbandry	ALSDA Processed Data	Image Processing And Reconstruction	radiation dosimetry
+Study Protocol Type	sample collection	Image Scan Acquisition	Animal Husbandry	data transformation	Image Processing And Reconstruction	chronic
+Study Protocol Type Term Accession Number			http://purl.bioontology.org/ontology/MESH/D000822	http://purl.obolibrary.org/obo/OBI_0200000	https://osdr.nasa.gov/	http://purl.obolibrary.org/obo/PATO_0001863
+Study Protocol Type Term Source REF			MESH	OBI	OBI	OBI
+Study Protocol Description	The RR-1 mice were euthanized by ISS crew with Euthasol injection followed by cervical dislocation, frozen in a pre-chilled Mini Cold Bag (MCB) before transfer to the MELFI freezer (-80 C) and brought back to Earth. Exact matched procedures were held for ground control, vivarium, and basal groups. After vehicle return, dissection of all four groups (flight, baseline, ground, vivarium) were conducted. The returned carcasses were thawed and dissected twice. The first round of carcass dissections, known as the RR1 1st thaw BSP (Biospecimen Sharing Program), spanned a 2-week period in April 2015 and a 1-week period in May 2015. The RR1 2nd thaw BSP was performed in March 2016. BSP samples were dissected, frozen, and then transferred to the Ames Life Sciences Data Archive (ALSDA; now NBISC [NASA Biological Institutional Scientific Collection) for long-term storage. Tissues from forty mice were received for this study, from RR-1 through BSP/ALSDA and lumbar vertebrae (L4) were assessed for cancellous bone by microcomputed tomography. Vertebrae were preserved by wrapping specimens with single 2-ply gauze squares (1/3 of a typical tri-fold gauze pad) and dipped into PBS with Ca2+ and Mg2+. Tissues were stored in labeled specimen containers and placed on ice, and subsequently stored at -20C.	The mCT machine used for this study was a SkyScan 1174, Bruker, Belgium. The scanning was conducted at 6.7 micrometers per pixel, x-ray intensity was 800 miliamperes, and killivolt peak was 50kvp, with frame averaging of 2. A .log file from the scanning, reconstruction, and analysis from this mCT study was submitted and available for data provenance.	This study was approved by by the NASA Ames Research Center Institutional Animal Care and Use Committee (IACUC). Post-pubescent female C57BL/6J mice (16 weeks at launch) were exposed to 37 days of microG flight, after being flown to the ISS, and housed in the Rodent Habitat. Mice of similar age, sex and strain were used for ground controls housed in identical hardware and matching ISS environmental conditions. The mice were acclimated to NASA Rodent Food bars, lixits, and wire floors.	To enable maximal data reuse (for machine-readable approaches), the submitted version of this dataset was subsequently transformed and edited to be aligned with a microCT data reuse template, which was created through feedback provided by subject matter experts in the ALSDA Analysis Working Group. This transformed reusable version is structured so all results are standardized into specific rows (source/subject) and columns (measures). This enables all microCT results to be identically structured for efficient data mining.	An upper/lower threshold approach was used to binarize grayscale images, with a lower gray threshold of 40 and upper gray threshold of 255 (on 0-1000 scale).	The absorbed dose of ionizing radiation received by biological payloads on the International Space Station (ISS) depends on a number of factors, including date and duration of exposure and location of the payload on the ISS. Some of the factors that lead to variations in the absorbed dose rate in orbit are ISS altitude, period during the solar cycle, and location of the sample—the ISS module and the specific location within that module. Shielding effects from the biological payload container or habitat have not been taken into account. The measured absorbed dose can vary based on the dosimetry instrument(s) used. Radiation monitoring on the ISS is not standardized across modules; each international partner has its own suite of instruments, with differing technologies, sensitivities and analysis methodologies, including criteria for distinguishing between lightly ionizing particles (mainly protons) and highly ionizing particles (mainly galactic cosmic ray nuclei). Both active and passive dosimeters are used. Active dosimeters are powered and data are read out and stored and/or telemetered to ground. Some active dosimeters provide additional levels of detail such as time resolution, energy deposition and particle identification. Passive dosimeters are unpowered, record constantly and are read out upon return to the ground. The dose in the metadata is the dose recorded by the radiation detector closest to the sample. In most cases that detector will be in the same ISS module; in cases where data from a detector in the same module are not available, the dose is extrapolated using data from periods where data are available from detectors in multiple modules, including the module containing the payload. The duration of the experiment is defined as the time in space during which the specimen was “living”, including the time on the delivery vehicle (e.g. SpaceX Dragon). Once the specimen was frozen or fixed, the experiment was considered stopped. Details of ISS dosimetry and a table with doses for all GeneLab ISS experiment ISS datasets are available at https://genelab.nasa.gov/environmental/radiation.
+Study Protocol URI						
+Study Protocol Version						
+Study Protocol Parameters Name	Sample Preservation Method;Sample Storage Temperature;Carcass Preservation Method;Carcass Weight;Euthanasia Method	Scanner;Volume Of Interest Location;X-ray Intensity;Voxel Size;Kilovolt Peak;Frame Averaging	habitat;light cycle;duration	Transformed Reusable Files	Threshold Approach;Threshold Value;Raw Results Data File;Log File;Submitted Results File	vehicle;exposure duration;absorbed radiation dose;absorbed radiation dose rate;ionizing radiation;ionizing radiation categorized by source
+Study Protocol Parameters Name Term Accession Number	https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	;;;;;	http://purl.obolibrary.org/obo/ENVO_01000739;http://purl.obolibrary.org/obo/NCIT_C90419;http://www.ebi.ac.uk/efo/EFO_0000433	https://genelab-data.ndc.nasa.gov/	https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/	http://purl.obolibrary.org/obo/ENVO_01000604;http://purl.obolibrary.org/obo/NCIT_C83280;http://purl.obolibrary.org/obo/RBO_00005010;http://purl.obolibrary.org/obo/RBO_00005011;http://purl.obolibrary.org/obo/RBO_00000116;http://purl.obolibrary.org/obo/RBO_00000001
+Study Protocol Parameters Name Term Source REF	;;GLDS;GLDS;NCIT	;;;;;	;NCIT;EFO	GLDS	;;;;	;NCIT;;;;
+Study Protocol Components Name						
+Study Protocol Components Type						
+Study Protocol Components Type Term Accession Number						
+Study Protocol Components Type Term Source REF						
+STUDY CONTACTS
+Study Person Last Name	Dubeé	Scott	Thomas	Pendleton	Alwood
+Study Person First Name	Parker	Ryan	Nicholas	Megan	Joshua
+Study Person Mid Initials	B.	T.	J.	M.	S.
+Study Person Email					joshua.s.alwood@nasa.gov
+Study Person Phone					
+Study Person Fax					
+Study Person Address					
+Study Person Affiliation	Space Life Sciences Training Program	Blue Marble Space Institute of Science	Blue Marble Space Institute of Science	UC Berkeley	NASA Ames Research Center
+Study Person Roles	Author	Author	Author	Author	principal investigator
+Study Person Roles Term Accession Number	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	http://www.ebi.ac.uk/efo/EFO_0009736
+Study Person Roles Term Source REF	NCIT	NCIT	NCIT	NCIT	EFO
