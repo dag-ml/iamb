@@ -1,0 +1,126 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO		OBI	MESH				NCIT
+Term Source File	http://data.bioontology.org/ontologies/EFO	http://purl.obolibrary.org/obo/ncit.owl	http://data.bioontology.org/ontologies/OBI		http://purl.obolibrary.org/obo/ncit.owl	http://purl.obolibrary.org/obo/ncit.owl	http://purl.obolibrary.org/obo/ncit.owl	
+Term Source Version	132	18.10e	29		18.10e	18.10e	18.10e	
+Term Source Description	Experimental Factor Ontology	NCI Thesaurus OBO Edition	Ontology for Biomedical Investigations		NCI Thesaurus OBO Edition	NCI Thesaurus OBO Edition	NCI Thesaurus OBO Edition	
+INVESTIGATION
+Investigation Identifier	
+Investigation Title	
+Investigation Description	
+Investigation Submission Date	
+Investigation Public Release Date	
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-351
+Study Title	Effects of Spaceflight on Bone Microarchitecture in the Axial and Appendicular Skeleton in Growing Ovariectomized Rats from STS-62
+Study Description	This study investigated the effects of a 14-day spaceflight on bone mass, density and microarchitecture in weight bearing (femur and humerus) and non-weight bearing (2nd) lumbar vertebra and calvarium) bones in the context of ovarian hormone insufficiency. 12-week-old Fisher 344 rats were ovariectomized 2 weeks before flight and randomized into one of three groups: 1) baseline (n equals 6), 2) ground control (n equals 12) or 3) spaceflight (n equals 12). Additional ground-based ovary-intact rats provided age-matched reference values at baseline (n equals 8) and landing (n equals 10). Ovariectomy resulted in bone- and bone compartment-specific deficits in cancellous bone volume fraction. Spaceflight resulted in lower cortical bone accrual in the femur but had no effect on cortical bone in the humerus or calvarium. Cancellous bone volume fraction was lower in flight animals compared to ground control animals in lumbar vertebra and distal femur metaphysis and epiphysis; significant differences were not detected in the distal humerus. Bone loss (compared to baseline controls) in the femur metaphysis was associated with lower trabecular number, whereas trabecular thickness and number were lower in the epiphysis. This dataset is only for the ovariectomized animals. In summary, the effect of spaceflight on bone microarchitecture in ovariectomized rats was bone-and bone compartment-specific but not strictly related to weight bearing. This dataset derives results from the micro–computed tomography (mCT) assay.
+Study Submission Date	27-May-2022
+Study Public Release Date	20-Jan-2023
+Study File Name	s_OSD-351.txt
+Comment[Acknowledgments]	
+Comment[Data Source Accession]	LSDA_NNX12AL24G__3471210148
+Comment[Data Source Link]	https://lsda.jsc.nasa.gov/Dataset/dataset_detail_result/NNX12AL24G__3471210148
+Comment[Experiment Platform]	Animal Enclosure Module (AEM)
+Comment[Flight Program]	Space Transportation System (Shuttle), STS-62
+Comment[Funding]	This work was supported by the National Science Foundation Research Traineeship Program (DGE-0956280) and a grant from the National Aeronautics and Space Administration (NNX12AL24G).
+Comment[Managing NASA Center]	Ames Research Center (ARC)
+Comment[Mission End]	18-Mar-1994
+Comment[Mission Link]	https://lsda.jsc.nasa.gov/Mission/miss/104
+Comment[Mission Name]	STS-62
+Comment[Mission Start]	04-Mar-1994
+Comment[Project Identifier]	Physiological Systems Experiment-04 (PSE.04)
+Comment[Project Link]	https://lsda.jsc.nasa.gov/Experiment/exper/13461
+Comment[Project Title]	Role of Marrow Adipocytes in Bone Loss during Simulated Spaceflight (NNX12AL24G)
+Comment[Project Type]	Spaceflight Study
+Comment[Space Program]	NASA
+Comment[Study Grant Number]	NNX12AL24G
+STUDY DESIGN DESCRIPTORS
+Study Design Type
+Study Design Type Term Accession Number
+Study Design Type Term Source REF
+STUDY PUBLICATIONS
+Study PubMed ID	26691062
+Study Publication DOI	10.1038/srep18671
+Study Publication Author List	Keune JA, Branscum AJ, Iwaniec UT, Turner RT.
+Study Publication Title	Effects of Spaceflight on Bone Microarchitecture in the Axial and Appendicular Skeleton in Growing Ovariectomized Rats from STS-62
+Study Publication Status	Published
+Study Publication Status Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0001796
+Study Publication Status Term Source REF	
+Comment[Study Publication Link]	https://doi.org/10.1038/srep18671
+STUDY FACTORS
+Study Factor Name	Spaceflight	Tissue
+Study Factor Type	Space Flight	Tissue
+Study Factor Type Term Accession Number	http://purl.bioontology.org/ontology/MESH/D013026	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Study Factor Type Term Source REF	MESH	NCIT
+STUDY ASSAYS
+Study Assay File Name	a_OSD-351_bone-microstructure_micro-computed-tomography_scanco mct40 scanner.txt
+Study Assay Measurement Type	Bone Microstructure
+Study Assay Measurement Type Term Accession Number	http://purl.jp/bio/4/id/200906009687576300
+Study Assay Measurement Type Term Source REF	
+Study Assay Technology Type	Micro-Computed Tomography
+Study Assay Technology Type Term Accession Number	http://purl.obolibrary.org/obo/MMO_0000570
+Study Assay Technology Type Term Source REF	
+Study Assay Technology Platform	Scanco mCT40 scanner
+STUDY PROTOCOLS
+Study Protocol Name	sample collection	Image Scan Acquisition	Image Processing And Reconstruction	Animal Husbandry	ALSDA Processed Data
+Study Protocol Type	sample collection	Image Scan Acquisition	Image Processing And Reconstruction	Animal Husbandry	data transformation
+Study Protocol Type Term Accession Number				http://purl.bioontology.org/ontology/MESH/D000822	http://purl.obolibrary.org/obo/OBI_0200000
+Study Protocol Type Term Source REF				MESH	OBI
+Study Protocol Description	The baseline group was sacrificed on day of launch. Flight animals were sacrificed 4-6 hours after landing. Additional ground-based ovary-intact rats (n equals 18) were evaluated. The ovary-intact animals represent reserve rats to be used if the originally planned flight had been delayed. Since the mission was carried out as anticipated, these animals were maintained in a vivarium and sacrificed to provide age-matched reference values for baseline (n equals 8, 12 weeks old) and flight (n equals 10, 14 weeks old). The purpose of the ovary-intact controls was 2-fold: 1) to evaluate normal age-related changes in bone over the 2 week flight period, and 2) to verify that ovariectomies (OVX) resulted in anticipated cancellous osteopenia. This dataset is only the data from OVX animals. All rats were sacrificed by decapitation and bones were harvested and placed in 70% ethanol for analysis.	"Micro-computed Tomography was used for nondestructive three-dimensional evaluation of bone volume and cortical and cancellous bone microarchitecture. Femora, humeri, 2nd lumbar vertebrae, and right calvaria were scanned using a Scanco mCT40 scanner (Scanco Medical AG, Basserdorf, Switzerland) at 55 kVp x-ray
+voltage, 145 milliampere intensity, and 200 ms integration time. Femora, humeri, and right calvaria were scanned at a voxel size of 12micron × 12 micron × 12 micron while 2nd lumbar vertebrae were scanned at a voxel size of 16 micron × 16 micron × 16 micron. Cortical bone was evaluated in the femur and humerus diaphyses. Cancellous bone was evaluated in the distal femur metaphysis and epiphysis, in the distal humerus epiphysis, and in the vertebral body. Calvarial thickness was evaluated in a subsection of the parietal bone.
+
+
+Femur. Eighty-two slices (984 micrometers in length) of cortical bone were assessed in the femur mid-diaphysis. All cortical slices were examined visually for evidence of cancellous struts originating from the endocortex (extremely rare at this site) and manually removed when present. Direct cortical bone measurements included total cross-sectional volume (mm3), cortical volume (mm3), marrow volume (mm3) and cortical thickness (micrometers). Three-dimensional cortical volume measurements
+were converted to two-dimensional area measurements. Polar moment of inertia (mm4) was determined as a surrogate measure of bone strength in torsion. Seventy four slices (888 micrometers in length) of cancellous bone, 150 slices (1,800 micrometers in length) proximal to the growth plate, were assessed in the distal femur metaphysis. The entire cancellous bone compartment (64 plus-minus 1 slices, 768 plus-minus 12micrometers) was evaluated in the distal femur epiphysis. Direct
+cancellous bone measurements included bone volume fraction (bone volume/tissue volume; volume of total tissue occupied by cancellous bone, percent), connectivity density (number of redundant connections per unit volume, mm-3; this index detects defects in cancellous architecture), structure model index (an architectural index defining bone as plate-like or rod-like with values ranging from 0 to 3, respectively), trabecular thickness (mean thickness of individual trabeculae, micrometers), trabecular number (number of trabecular intercepts per unit length, mm-1) and trabecular separation (distance between trabeculae, micrometers).
+
+
+Humerus. Twenty slices (240 micrometers in length) of cortical bone were evaluated in the humerus diaphysis. The entire cancellous compartment (65 plus-minus 1 slices, 780 plus-minus 12 micrometers in length) was evaluated in the distal humerus epiphysis. Cortical and cancellous bone measurements were the same as those described for the femur.
+
+
+Lumbar vertebra. Analysis of the lumbar vertebra included the entire region of cancellous bone in the vertebral body between the cranial and caudal growth plates (238 plus-minus 2 slices, 3808 plus-minus 32 micrometers in length). Cancellous bone measurements were the same as those described for the distal femur.
+
+
+Calvarium. Calvarial thickness (micrometers) was measured in the parietal bone in a 1.2 × 2.4 mm rectangle starting 1.8 mm rostral to the lambdoid suture, and midway between the sagittal suture and temporal crest."	Automated contouring was used to delineate cortical bone from non-bone. Filtering parameters sigma and support were set to 0.8 and 1, respectively. The threshold value for evaluation was determined empirically and set at 245 (gray scale, 0-1000).	"Twelve-week-old female Fischer 344 rats (Taconic Farms, Germantown, NY) were used in the study. The animals were maintained in accordance with the NIH Guide for the Care and Use of Laboratory Animals and the experimental protocol was approved by the NASA and Mayo Clinic Animal Care and Use Committees. The rats were ovx 14 days prior to launch and randomly assigned to one of three treatment
+groups: 1) baseline control (baseline, n equals 6), 2) ground-based flight control (ground control, n equals 12), or 3) spaceflight (flight, n equals 12). The flight animals were flown on the Space Shuttle Columbia (STS-62) for 14 days. Flight and ground control animals were housed in animal enclosure modules (AEM) with 6 rats/AEM. The AEMs were maintained at 28 °C. All animals were provided with food
+(Teklad L356 food bars; Teklad Inc., Madison, WI) and water ad libitum."	To enable maximal data reuse (for machine-readable approaches), the submitted version of this dataset was subsequently transformed and edited to be aligned with a microCT data reuse template, which was created through feedback provided by subject matter experts in the ALSDA Analysis Working Group. This transformed reusable version is structured so all results are standardized into specific rows (source/subject) and columns (measures). This enables all microCT results to be identically structured for efficient data mining.
+Study Protocol URI					
+Study Protocol Version					
+Study Protocol Parameters Name	Sample Preservation Method;Euthanasia Method;Euthanasia Timing	Scanner;Volume Of Interest Location;Volume Of Interest Size;X-ray Intensity;Voxel Size;Kilovolt Peak;Integration Time Exposure;Volume of Interest Location 2;Volume of Interest Size 2;VOI Location 3;VOI Size 3	Segmentation Selection Method;Filter Support Value;Filter Sigma/SD;Threshold Approach;Threshold Value;Submitted Results Files	habitat;duration;Housing Temperature;Ovariectomy	Transformed Reusable Files
+Study Protocol Parameters Name Term Accession Number	https://genelab-data.ndc.nasa.gov/;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl;https://genelab-data.ndc.nasa.gov/	;;;;;;;https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/	;;;;;https://genelab-data.ndc.nasa.gov/	http://purl.obolibrary.org/obo/ENVO_01000739;http://www.ebi.ac.uk/efo/EFO_0000433;https://genelab-data.ndc.nasa.gov/;http://purl.bioontology.org/ontology/MESH/D010052	https://genelab-data.ndc.nasa.gov/
+Study Protocol Parameters Name Term Source REF	;;	;;;;;;;;;;	;;;;;	;EFO;;MESH	
+Study Protocol Components Name					
+Study Protocol Components Type					
+Study Protocol Components Type Term Accession Number					
+Study Protocol Components Type Term Source REF					
+STUDY CONTACTS
+Study Person Last Name	Keune	Branscum	Iwaniec	Turner
+Study Person First Name	Jessica A	Adam J	Urszula T	Russell T
+Study Person Mid Initials				
+Study Person Email			urszula.iwaniec@oregonstate.edu	russell.turner@oregonstate.edu
+Study Person Phone				
+Study Person Fax				
+Study Person Address				
+Study Person Affiliation	Oregon State University	Oregon State University	Oregon State University	Oregon State University
+Study Person Roles	Author	Author	Author	principal investigator
+Study Person Roles Term Accession Number	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.obolibrary.org/obo/NCIT_C42781	http://purl.obolibrary.org/obo/NCIT_C42781	http://www.ebi.ac.uk/efo/EFO_0009736
+Study Person Roles Term Source REF				EFO
