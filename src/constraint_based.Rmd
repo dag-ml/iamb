@@ -1,0 +1,75 @@
+---
+title: "Constraint_Based_WS"
+output: html_notebook
+---
+
+Ultilizing the IAMB feature in bnlearn package to learn the structure of a Bayesian Network.
+Install packages
+```{r}
+# install.packages(`bnlearn`)
+# install.packages("BiocManager")
+# BiocManager::install("Rgraphviz")
+```
+
+Import them into the current R session
+```{r}
+library(bnlearn)
+library(Rgraphviz)
+```
+
+Paths data
+```{r}
+# Set data path
+data_path <- paste0(getwd(), "/data/")
+
+# Define file paths
+l30 <- paste0(data_path, "osd_310/LSDS-30_histomorphometry_turnerTRANSFORMED.csv")
+l9 <- paste0(data_path, "osd_351/LSDS-9_microCT_turnerTRANSFORMED.csv")
+l40_bone <- paste0(data_path, "osd_477/LSDS-40_Bone_Biomechanical_LDSD-40_biomechanical_KoTRANSFORMED.csv")
+l40_hist <- paste0(data_path, "osd_477/LSDS-40_histomorphometry_LSDS-40_histomorphometry_KoTRANSFORMED.csv")
+l40_micro <- paste0(data_path, "osd_477/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv")
+l15 <- paste0(data_path, "osd_489/LSDS-15_microCT_alwoodTRANSFORMED.csv")
+l41 <- paste0(data_path, "osd_608/LSDS-41_peripheral_quantitative_computed_tomography_pQCT_LSDS-41_pQCT_KoTRANSFORMED.csv")
+```
+
+Choose the data to be used
+```{r}
+picked_data <- l15
+```
+
+Read in the data and create subset
+```{r}
+data <- read.csv(picked_data, header=FALSE, skip=1)
+dsub_set <- subset(data, select=-(1:2))
+dsub_set$V3 <- as.numeric(factor(dsub_set$V3, levels = unique(dsub_set$V3)))
+```
+
+Apply all the constraints-based algorithms (IAMB variations)
+
+IAMB
+```{r}
+iamb_dag <- bnlearn::iamb(dsub_set)
+graph_dag <- bnlearn::as.graphNEL(iamb_dag)
+plot(graph_dag)
+```
+
+Fast-IAMB
+```{r}
+fast_iamb_dag <- bnlearn::fast.iamb(dsub_set)
+graph_dag <- bnlearn::as.graphNEL(fast_iamb_dag)
+plot(graph_dag)
+```
+
+Inter-IAMB
+```{r}
+inter_iamb_dag <- bnlearn::inter.iamb(dsub_set)
+graph_dag <- bnlearn::as.graphNEL(inter_iamb_dag)
+plot(graph_dag)
+```
+
+IAMB-FDR
+```{r}
+iamb_fdr_dag <- bnlearn::iamb.fdr(dsub_set)
+graph_dag <- bnlearn::as.graphNEL(iamb_fdr_dag)
+plot(graph_dag)
+```
