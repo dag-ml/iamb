@@ -83,6 +83,7 @@ data$Fem.Length..mm. <- as.numeric(data$Fem.Length..mm.)
 dsub_set <- data[, -c(1:5)]
 ```
 
+
 Constraint-based learning algorithms
 ```{r}
 # Learn the DAG structure
@@ -110,39 +111,4 @@ edge_attrs <- list(
 
 # Plot the DAG
 plot(graph_dag, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-```
-
-
-
-
-
-
-
-
-IAMB
-```{r}
-iamb_dag <- bnlearn::iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(iamb_dag)
-plot(graph_dag)
-```
-
-Fast-IAMB
-```{r}
-fast_iamb_dag <- bnlearn::fast.iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(fast_iamb_dag)
-plot(graph_dag)
-```
-
-Inter-IAMB
-```{r}
-inter_iamb_dag <- bnlearn::inter.iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(inter_iamb_dag)
-plot(graph_dag)
-```
-
-IAMB-FDR
-```{r}
-iamb_fdr_dag <- bnlearn::iamb.fdr(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(iamb_fdr_dag)
-plot(graph_dag)
 ```
