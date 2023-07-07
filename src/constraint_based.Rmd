@@ -11,7 +11,7 @@ Install packages
 # BiocManager::install("Rgraphviz")
 ```
 
-Full run cause I'm lazy
+Setup
 ```{r}
 # Load packages
 library(bnlearn)
@@ -19,26 +19,34 @@ library(Rgraphviz)
 
 # Set data path
 data_path <- paste0(getwd(), "/data/")
-export_path <- paste0(getwd(), "/img/")
+export_path <- paste0(getwd(), "/dags/")
 
 # Define file paths
-l30 <- paste0(data_path, "osd_310/LSDS-30_histomorphometry_turnerTRANSFORMED.csv")
-l9 <- paste0(data_path, "osd_351/LSDS-9_microCT_turnerTRANSFORMED.csv")
+l30_hist <- paste0(data_path, "osd_310/LSDS-30_histomorphometry_turnerTRANSFORMED.csv")
+l9_micro <- paste0(data_path, "osd_351/LSDS-9_microCT_turnerTRANSFORMED.csv")
 l40_bone <- paste0(data_path, "osd_477/LSDS-40_Bone_Biomechanical_LDSD-40_biomechanical_KoTRANSFORMED.csv")
 l40_hist <- paste0(data_path, "osd_477/LSDS-40_histomorphometry_LSDS-40_histomorphometry_KoTRANSFORMED.csv")
 l40_micro <- paste0(data_path, "osd_477/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv")
-l15 <- paste0(data_path, "osd_489/LSDS-15_microCT_alwoodTRANSFORMED.csv")
-l41 <- paste0(data_path, "osd_608/LSDS-41_peripheral_quantitative_computed_tomography_pQCT_LSDS-41_pQCT_KoTRANSFORMED.csv")
+l15_micro <- paste0(data_path, "osd_489/LSDS-15_microCT_alwoodTRANSFORMED.csv")
+l41_tomo <- paste0(data_path, "osd_608/LSDS-41_peripheral_quantitative_computed_tomography_pQCT_LSDS-41_pQCT_KoTRANSFORMED.csv")
+```
 
+
+IAMB
+```{r}
 # Pick data
-picked_data <- l15
+picked_data <- l9_micro
 data <- read.csv(picked_data, header=TRUE)
 dsub_set <- data[, -c(1:3)]
 
 # Learn the DAG structure
 iamb_dag <- bnlearn::iamb(dsub_set)
 graph_dag <- bnlearn::as.graphNEL(iamb_dag)
+```
 
+
+Graph
+```{r}
 # Graphviz plot attributes
 graph_attrs <- list(
     rankdir = "LR", 
