@@ -19,7 +19,6 @@ library(Rgraphviz)
 
 # Set data path
 DATA_PATH <- paste0(getwd(), "/data/")
-EXPORT_PATH <- paste0(getwd(), "/dags/")
 ```
 
 
@@ -29,7 +28,6 @@ Data
 l30_hist <- paste0(DATA_PATH, "turner/LSDS-30_histomorphometry_turnerTRANSFORMED.csv")
 l40_bone <- paste0(DATA_PATH, "ko/LSDS-40_Bone_Biomechanical_LDSD-40_biomechanical_KoTRANSFORMED.csv")
 l40_hist <- paste0(DATA_PATH, "ko/LSDS-40_histomorphometry_LSDS-40_histomorphometry_KoTRANSFORMED.csv")
-l40_micro <- paste0(DATA_PATH, "ko/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv")
 l41_tomo <- paste0(DATA_PATH, "ko/LSDS-41_peripheral_quantitative_computed_tomography_pQCT_LSDS-41_pQCT_KoTRANSFORMED.csv")
 ```
 
@@ -48,10 +46,11 @@ Turner/LSDS-9_microCT
 # Pick data
 picked_data <- paste0(DATA_PATH, "turner/LSDS-9_microCT_turnerTRANSFORMED.csv")
 data <- read.csv(picked_data, header=TRUE)
-data$cortical_thickness_micrometer <- as.numeric(data$cortical_thickness_micrometer)
 
-# Loop through all columns with "cancellous" in the name and convert to numeric
+# Convert necessary columns to numeric
+data$cortical_thickness_micrometer <- as.numeric(data$cortical_thickness_micrometer)
 for (i in 1:ncol(data)) {
+    # Loop through all columns with "cancellous" in the name and convert to numeric
     if (grepl("cancellous", colnames(data)[i])) {
         data[, i] <- as.numeric(data[, i])
     }   
@@ -64,10 +63,30 @@ dsub_set <- data[, -c(1:3)]
 ```
 
 
+Ko/LSDS-40_microCT
+```{r}
+# Pick data
+picked_data <- paste0(DATA_PATH, "ko/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv")
+data <- read.csv(picked_data, header=TRUE, skip=1) # Skip first row
+
+# Clean up column names
+for (i in 1:ncol(data)) {
+    if (grepl("_", colnames(data)[i])) {
+        colnames(data)[i] <- sapply(strsplit(colnames(data)[i], "_"), function(x) paste0(substr(x, 1, 4), collapse = "_"))
+    }
+}
+
+# Convert necessary columns to numeric
+data$Fem.Length..mm. <- as.numeric(data$Fem.Length..mm.)
+
+# Remove first 5 columns
+dsub_set <- data[, -c(1:5)]
+```
+
 Constraint-based learning algorithms
 ```{r}
 # Learn the DAG structure
-iamb_dag <- bnlearn::iamb(dsub_set)
+iamb_dag <- bnlearn::iamb.fdr(dsub_set)
 graph_dag <- bnlearn::as.graphNEL(iamb_dag)
 
 
