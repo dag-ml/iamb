@@ -7,11 +7,9 @@ def conditional_independence_test(data, xi, xj, z_list):
 
     for z in z_list:
         contingency_table = contingency_table.stack(z)
+
+    observed = contingency_table.values # Flatten the contingency table to a 2D array
     
-    # Flatten the contingency table to a 2D array
-    observed = contingency_table.values
-    
-    # Perform the chi-square test
     chi2, p_value, _, _ = chi2_contingency(observed)
 
     return p_value
