@@ -19,7 +19,6 @@ library(Rgraphviz)
 
 # Set data path
 DATA_PATH <- paste0(getwd(), "/data/")
-EXPORT_PATH <- paste0(getwd(), "/dags/")
 ```
 
 
@@ -29,45 +28,112 @@ Data
 l30_hist <- paste0(DATA_PATH, "turner/LSDS-30_histomorphometry_turnerTRANSFORMED.csv")
 l40_bone <- paste0(DATA_PATH, "ko/LSDS-40_Bone_Biomechanical_LDSD-40_biomechanical_KoTRANSFORMED.csv")
 l40_hist <- paste0(DATA_PATH, "ko/LSDS-40_histomorphometry_LSDS-40_histomorphometry_KoTRANSFORMED.csv")
-l40_micro <- paste0(DATA_PATH, "ko/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv")
 l41_tomo <- paste0(DATA_PATH, "ko/LSDS-41_peripheral_quantitative_computed_tomography_pQCT_LSDS-41_pQCT_KoTRANSFORMED.csv")
+```
+
+
+Cooked Functions
+```{r}
+# Func: shortenColumnNames
+# Desc: Shortens the column names by keeping the first four characters of each name.
+#
+# Param:
+#   column_names: Character vector of column names to be shortened.
+#   pattern: Optional. Pattern to split the column names. Default is "_".
+#
+# Returns:
+#   Character vector with shortened column names.
+shortenColumnNames <- function(column_names, pattern = "_") {
+    shortened_names <- sapply(strsplit(column_names, pattern), function(x) paste0(substr(x, 1, 4), collapse = pattern))
+    return(shortened_names)
+}
+
+
+
+# Func: convertColumnsToNumeric
+# Desc: Converts columns containing a specified keyword in their names to numeric values.
+#
+# Param:
+#   data: Data frame to be modified.
+#   keyword: Keyword to match in the column names.
+#
+# Returns:
+#   Modified data frame with the specified columns converted to numeric values.
+convertColumnsToNumeric <- function(data, keyword) {
+    for (i in 1:ncol(data)) {
+        if (grepl(keyword, colnames(data)[i])) {
+            data[, i] <- as.numeric(data[, i])
+        }   
+    }
+    return(data)
+}
+
+
+
+# Func: readCSVFile
+# Desc: Reads a CSV file and returns the data frame.
+#
+# Param:
+#   file_path: Character string specifying the path of the CSV file.
+#   header: Optional logical value indicating whether the file has a header row. Default is TRUE.
+#   skip_rows: Optional numeric value specifying the number of rows to skip. Default is 0.
+#
+# Returns:
+#   Data frame containing the contents of the CSV file.
+readCSVFile <- function(file_path, header = TRUE, skip_rows = 0) {
+    picked_data_path <- paste0(DATA_PATH, file_path)
+    data <- read.csv(picked_data_path, header = header, skip = skip_rows)
+    return(data)
+}
+
 ```
 
 
 Turner/LSDS-15_microCT
 ```{r}
-# Pick data
-picked_data <- paste0(DATA_PATH, "alwood/LSDS-15_microCT_alwoodTRANSFORMED.csv")
-data <- read.csv(picked_data, header=TRUE)
+data <- readCSVFile("alwood/LSDS-15_microCT_alwoodTRANSFORMED.csv")
 dsub_set <- data[, -c(1:3)]
 ```
 
 
 Turner/LSDS-9_microCT
 ```{r}
-# Pick data
-picked_data <- paste0(DATA_PATH, "turner/LSDS-9_microCT_turnerTRANSFORMED.csv")
-data <- read.csv(picked_data, header=TRUE)
-data$cortical_thickness_micrometer <- as.numeric(data$cortical_thickness_micrometer)
+data <- readCSVFile("turner/LSDS-9_microCT_turnerTRANSFORMED.csv")
 
-# Loop through all columns with "cancellous" in the name and convert to numeric
-for (i in 1:ncol(data)) {
-    if (grepl("cancellous", colnames(data)[i])) {
-        data[, i] <- as.numeric(data[, i])
-    }   
-}
+# Convert necessary columns to numeric
+data$cortical_thickness_micrometer <- as.numeric(data$cortical_thickness_micrometer)
+data <- convertColumnsToNumeric(data, "cancellous")
 
 # Shorten column names
-colnames(data) <- sapply(strsplit(colnames(data), "_"), function(x) paste0(substr(x, 1, 4), collapse = "_"))
+colnames(data) <- shortenColumnNames(colnames(data))
 
 dsub_set <- data[, -c(1:3)]
+```
+
+
+Ko/LSDS-40_microCT
+```{r}
+data <- readCSVFile("ko/LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv", skip_rows = 1)
+
+# Convert necessary columns to numeric
+data$Fem.Length..mm. <- as.numeric(data$Fem.Length..mm.)
+
+# Clean up column names
+for (i in 1:ncol(data)) {
+    if (grepl("_", colnames(data)[i])) {
+        colnames(data)[i] <- shortenColumnNames(colnames(data)[i])
+    }
+}
+
+# Remove first 5 columns
+dsub_set <- data[, -c(1:5)]
 ```
 
 
 Constraint-based learning algorithms
 ```{r}
 # Learn the DAG structure
-iamb_dag <- bnlearn::iamb(dsub_set)
+iamb_dag <- bnlearn::iamb.fdr(dsub_set)
 graph_dag <- bnlearn::as.graphNEL(iamb_dag)
 
 
@@ -91,39 +157,4 @@ edge_attrs <- list(
 
 # Plot the DAG
 plot(graph_dag, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-```
-
-
-
-
-
-
-
-
-IAMB
-```{r}
-iamb_dag <- bnlearn::iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(iamb_dag)
-plot(graph_dag)
-```
-
-Fast-IAMB
-```{r}
-fast_iamb_dag <- bnlearn::fast.iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(fast_iamb_dag)
-plot(graph_dag)
-```
-
-Inter-IAMB
-```{r}
-inter_iamb_dag <- bnlearn::inter.iamb(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(inter_iamb_dag)
-plot(graph_dag)
-```
-
-IAMB-FDR
-```{r}
-iamb_fdr_dag <- bnlearn::iamb.fdr(dsub_set)
-graph_dag <- bnlearn::as.graphNEL(iamb_fdr_dag)
-plot(graph_dag)
 ```
