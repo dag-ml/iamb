@@ -1,20 +1,15 @@
-import bnlearn as bn
 import pandas as pd
+from constraint_based import iamb
 
-# # df = bn.import_example()
-# df = pd.read_csv('data\osd_489\LSDS-15_microCT_alwoodTRANSFORMED.csv')
-# df = df.iloc[:, 3:]
 
-# model = bn.structure_learning.fit(df)
-# model = bn.independence_test(model, df)     # Compute edge strength with the chi_square test statistic
-# G = bn.plot(model)
+def main():
+    # Read the csv file
+    l15 = pd.read_csv('data\ko\LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv')
+    l15 = l15.iloc[1:, 5:]
 
-# Read the csv file
-l9 = pd.read_csv('data\osd_351\LSDS-9_microCT_turnerTRANSFORMED.csv')
-l40 = pd.read_csv('data\osd_477\LSDS-40_microCT_LSDS-40_microCT_KoTRANSFORMED.csv', skiprows=1)
-l15 = pd.read_csv('data\osd_489\LSDS-15_microCT_alwoodTRANSFORMED.csv')
+    adjacency_matrix = iamb(l15, alpha=0.05)
+    print(adjacency_matrix)
 
-# Print out the header columns 
-print(l9.columns, '\n\n')
-print(l40.columns, '\n\n')
-print(l15.columns, '\n\n')
+
+if __name__ == '__main__':
+    main()
