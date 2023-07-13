@@ -1,0 +1,48 @@
+I’ve been working through the same exercise y’all have been working, namely reading in the data from the OSDR 
+    and getting it ready for further analysis. In so doing I’ve discovered some anomalies. First, there are 
+    some key fields missing in one of the Turner files, the one from the GLDS study. There should be three 
+    DXA variables there (bone density measures), and Ryan tells me that those were not included due to no 
+    standard yet being in place  for DXA when that file was processed and added to the repo some months ago. 
+    I therefore attach to this email a replacement for your use in this project. Use this file in place of 
+    the one called “LSDS-9_microCT_turnerTRANSFORMED.csv”.
+
+
+Another anomaly is that that there are now multiple bone mineral density variables in the Ko dataset. 
+    They were obtained by different means, mCT and pqCT. One requires the animal be dead (mCT) and can 
+    only be measured once. The other (pqCT) can be done on living animals, and though reliable over time, 
+    it is less valid than mCT. The variable we used in the original study was the mct_BMD in ko3. We won’t 
+    use the ko4 pqct_BMD’s for now, but we’ll keep them around for later experimentation. Ryan can explain 
+    more about these measures on Thursday.
+
+
+I also include here programs for the reading and processing of all the data needed for our exercises. 
+    They’re named by study/author and they read in the data, make needed component variables and/or scale 
+    singleton variables as needed. (Be sure to change the file path as appropriate for your computer.) The 
+    output of these should be data upon which you can test your algorithms. Note that most of these datasets 
+    only offer you a subset of the whole picture. 
+    
+    For example, the dataset called “turner” will have only 4 variables: exposure, mass, resorp, form. The 
+    experts tell us that this should form the left half of our picture, with exposure pointing to resorp and 
+    form, and then those both pointing to mass. Your task is to see if your algorithm figures that out, or 
+    if there is too little information for it to work. Part of what we learn then is which algorithms can 
+    get it right when there is only limited data.
+
+ 
+For the Ko dataset, let’s start by using only the rows where the duration of exposure is 28 days and the unloading 
+    is 0%, 60%, or 80%. This is to be consistent with what we did in the original paper. In addition to capturing 
+    the controls (0% group) it captures the animals that were exposed longest and were subjected to the most unloading. 
+    If our expert-elicited DAG is correct these should be the animals for whom it is easiest to see the causal relationships.
+
+
+Recall also that in the original study we could not validate resorption-based relationships using the Ko data. We 
+    think this was because the resorption measure, as an activity indicator, may have returned to a level of homeostasis 
+    by 4 weeks. One thing we might do then (time permitting) is to try learning the DAG from shorter timeframes; we could 
+    also play with the amount of unloading. We’ll get into this after we obtain and fully digest results of the main activity.
+
+ 
+Ok, I think that’s all for now. If there are questions please let me, Ryan, or Lauren know. I am taking a couple days off 
+    at the end of this week, so I will not be at Thursday’s meeting. Instead, Ryan is going to talk to you about bone biology 
+    and how/why the studies were designed and conducted the way they were. I will be at the AWG meeting on the 18th and then 
+    we’re back on the 20th for another team meeting. I’ll be going over the data and these programs, showing some of the ways 
+    I approach processing data in a project like this, and answering any questions you all bring. I imagine some of you will 
+    have some results as well by that time, so we can look at that too.
