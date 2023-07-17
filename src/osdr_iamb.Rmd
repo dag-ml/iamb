@@ -1,5 +1,5 @@
 ---
-title: "READ_OSDR"
+title: "OSDR IAMB"
 output: html_notebook
 ---
 
@@ -185,51 +185,32 @@ title <- "Alwood LSDS-15"
 
 🐭😲 Constraint-based learning algorithms 😲🐭
 ```{r}
-# Learn the DAG structure
-iamb_dag <- bnlearn::iamb(dsub_set)
-fast_iamb_dag <- bnlearn::fast.iamb(dsub_set)
-inter_iamb_dag <- bnlearn::inter.iamb(dsub_set)
-iamb_fdr_dag <- bnlearn::iamb.fdr(dsub_set)
-
-iamb_graph <- bnlearn::as.graphNEL(iamb_dag)
-fast_iamb_graph <- bnlearn::as.graphNEL(fast_iamb_dag)
-inter_iamb_graph <- bnlearn::as.graphNEL(inter_iamb_dag)
-iamb_fdr_graph <- bnlearn::as.graphNEL(iamb_fdr_dag)
-
 # Graphviz plot attributes
-graph_attrs <- list(
-    rankdir = "BT",     # (LR, RL, TB, BT)
-    size = "5,5",       # Size of graph
-    bgcolor = "white"
-    )
-node_attrs <- list(
-    # fontsize = 32, 
-    fontcolor = "black", 
-    shape = "circle", 
-    style = "filled", 
-    fillcolor = "lightyellow"
-    )
-edge_attrs <- list(
-    # fontsize = 12,
-    color = "black"
-    )
+graph_attrs <- list(rankdir = "BT", size = "5,5", bgcolor = "white")
+node_attrs <- list(fontcolor = "black", shape = "circle", style = "filled", fillcolor = "lightyellow")
+edge_attrs <- list(color = "black")
 
 # Plot the DAG
+plot_dag <- function(graph, algo){
+    plot_title <- paste0(algo, " 😲🐭 ", title)
+    plot(graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
+    title(plot_title, line = -4, cex.main = 2)
+}
+
 par(mfrow = c(2,2))
 
-plot_title <- paste0("IAMB 😲🐭 ", title)
-plot(iamb_graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-title(plot_title, line = -4, cex.main = 2)
-
-plot_title <- paste0("Fast IAMB 😲🐭 ", title)
-plot(fast_iamb_graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-title(plot_title, line = -4, cex.main = 2)
-
-plot_title <- paste0("Inter IAMB 😲🐭 ", title)
-plot(inter_iamb_graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-title(plot_title, line = -4, cex.main = 2)
-
-plot_title <- paste0("IAMB FDR 😲🐭 ", title)
-plot(iamb_fdr_graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-title(plot_title, line = -4, cex.main = 2)
+# Learn the DAG structure
+algorithms <- c("iamb", "fast.iamb", "inter.iamb", "iamb.fdr")
+graphs <- list()
+for (algo in algorithms) {
+    dag <- switch(algo,
+        "iamb" = iamb(dsub_set),
+        "fast.iamb" = fast.iamb(dsub_set),
+        "inter.iamb" = inter.iamb(dsub_set),
+        "iamb.fdr" = iamb.fdr(dsub_set)
+    )
+    graph <- as.graphNEL(dag)
+    graphs[[algo]] <- graph
+    plot_dag(graph, algo)
+}
 ```
