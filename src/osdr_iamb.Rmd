@@ -209,7 +209,7 @@ for (algo in algorithms) {
         "inter.iamb" = inter.iamb(dsub_set),
         "iamb.fdr" = iamb.fdr(dsub_set)
     )
-    graph <- as.graphNEL(dag)
+    graph <- as.graphNEL(cextend(dag))
     graphs[[algo]] <- graph
     plot_dag(graph, algo)
 }
