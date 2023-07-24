@@ -1,0 +1,65 @@
+---
+title: "OSDR IAMB"
+output: html_notebook
+---
+
+
+Install packages
+```{r}
+# install.packages(`bnlearn`)
+# install.packages("BiocManager")
+# BiocManager::install("Rgraphviz")
+# install.packages(c("psych","lavaan"), dependencies=TRUE)
+```
+
+
+Setup
+```{r}
+# Load packages
+library(bnlearn)
+library(Rgraphviz)
+library(psych)
+library(lavaan)
+
+# Set data path
+DATA_PATH <- paste0(getwd(), "/data/")
+LIB_PATH <- paste0(getwd(), "/src/lib/")
+PLOT <- paste0(LIB_PATH, "plot_IAMB.R")
+```
+
+
+Turner GLDS-351 (Metaphysis-related variables)
+```{r}
+main <- paste0(LIB_PATH, "turner_GLDS351_Metaphysis.R")
+```
+
+
+Turner GLDS-351 (Epiphysis-related variables)
+```{r}
+main <- paste0(LIB_PATH, "turner_GLDS351_Epiphysis.R")
+```
+
+
+Turner LSDS-30
+```{r}
+main <- paste0(LIB_PATH, "turner_LSDS_30.R")
+```
+
+
+All Ko
+```{r}
+main <- paste0(LIB_PATH, "ko.R")
+```
+
+
+Alwood LSDS-15
+```{r}
+main <- paste0(LIB_PATH, "alwood_LSDS_15.R")
+```
+
+
+🐭😲 Deploy Constraint-based learning algorithms 😲🐭
+```{r}
+source(main)
+source(PLOT)
+```
