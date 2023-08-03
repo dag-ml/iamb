@@ -19,7 +19,6 @@ Setup
 library(bnlearn)
 library(Rgraphviz)
 library(psych)
-library(lavaan)
 
 # Set data path
 DATA_PATH <- paste0(getwd(), "/data/")
@@ -40,13 +39,19 @@ main <- paste0(LIB_PATH, "turner_GLDS351_Epiphysis.R")
 ```
 
 
+Full Turner GLDS-351
+```{r}
+main <- paste0(LIB_PATH, "turner_GLDS351.R")
+```
+
+
 Turner LSDS-30
 ```{r}
 main <- paste0(LIB_PATH, "turner_LSDS_30.R")
 ```
 
 
-All Ko
+Full Ko
 ```{r}
 main <- paste0(LIB_PATH, "ko.R")
 ```
@@ -58,7 +63,7 @@ main <- paste0(LIB_PATH, "alwood_LSDS_15.R")
 ```
 
 
-🐭😲 Deploy Constraint-based learning algorithms 😲🐭
+😲🐭 Deploy Constraint-based learning algorithms 🐭😲
 ```{r}
 source(main)
 source(PLOT)

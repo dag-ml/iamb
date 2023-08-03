@@ -1,0 +1,24 @@
+Let’s tighten up our rodent data just to be sure we’re being thorough. I’m going to be perhaps 
+overly-prescriptive here just to be sure:
+    Alwood: make sure you are only feeding it {expose, trab, mass}
+
+    GLDS: there are several ways we could approach here. We could feed it only 
+        {mass_meta, trab_meta, expose}, 
+        {mass_epiph, trab_epiph, expose}, 
+        {mass_meta, trab_meta, mass_epiph, trab_epiph, expose}, or 
+        {mass, mass_meta, trab_meta, mass_epiph, trab_epiph, expose}. 
+        If you haven’t done some of those combinations, make you’ve collected the whole set.
+
+    Turner: you should be able to feed it everything {expose, mass, resorp, form}
+
+    Ko: some of you tried learning a DAG at each time slice. That’s worth doing if 
+        you have not done so. Let’s also throw all the data in at the same time and 
+        see what it does – all durations, all exposure levels. Then let it have all 
+        variables and let’s see what it does. After that, make a single exposure variable 
+        equal to duration*unload. This will be the percent-unloaded-days of exposure the 
+        animal received before being killed and assayed.
+
+Please do have a look at your correlation matrices for each dataset as you interpret any output. 
+Keep a copy of the expert-elicited DAG handy to compare. When the algo gets it wrong, try to ask 
+yourself, “why did it come to that conclusion?” This will mean you need to hold at least the 
+high-level steps of your algo in your mind, combined with a view to that correlation matrix.

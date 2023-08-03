@@ -77,9 +77,10 @@ ko$resorp <- scale(ko$OCSBS)
 ko$form   <- as.vector(form$scores)
 
 
-ko <- ko[,c("unload","dur","expose","mass","trab","stren","resorp","form")]
+#ko <- ko[,c("unload","dur","expose","mass","trab","stren","resorp","form")]
+ko <- ko[,c("unload","expose","mass","trab","stren","resorp","form")]
 
 rm(list=c("mass","trab","form","stren"))
 
 dsub_set <- ko
-title <- "All Ko(4/4)"
+title <- "Ko(4/4)"
