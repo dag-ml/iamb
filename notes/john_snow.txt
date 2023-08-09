@@ -1,0 +1,19 @@
+John Snow (1813–1858) was a British physician, made significant contributions to the understanding of causation, 
+particularly in the context of disease outbreaks
+
+Made implications for evaluating causal discovery without the presence of ground truth information.
+
+
+Cholera outbreak in London's Soho district: 
+
+    - At the time, the prevailing belief was that diseases like cholera were spread through "miasma" (bad air). 
+    
+    - Snow suspected the cause was contaminated water.
+    
+    - He mapped the cases of cholera and the locations of water pumps in the area, discovering a 
+    cluster of cases around a specific contaminated water pump on Broad Street.
+
+    - By gathering and analyzing data on the locations of cases and water sources, Snow was able to demonstrate a 
+    strong correlation between the contaminated water source and the disease outbreak. 
+    
+    - Used Spatial analysis of data to establish a causal relationship between a contaminated water and cholera.
