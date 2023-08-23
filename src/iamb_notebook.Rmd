@@ -63,6 +63,12 @@ main <- paste0(LIB_PATH, "alwood_LSDS_15.R")
 ```
 
 
+Lauren Dataset
+```{r}
+main <- paste0(LIB_PATH, "lauren.R")
+```
+
+
 😲🐭 Deploy Constraint-based learning algorithms 🐭😲
 ```{r}
 source(main)
