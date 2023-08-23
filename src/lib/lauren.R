@@ -48,22 +48,38 @@ subset <- subset[, !names(subset) %in% c(
 #     pca_list[[exp_col]] <- exp_res
 # }
 
-si_bdg <- pca(subset[,c("Bgd_Si.350.MeV.n_4", "Bgd_Si.350.MeV.n_8", "Bgd_Si.350.MeV.n_24", "Bgd_Si.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
-ar_bdg <- pca(subset[,c("Bgd_Ar.350.MeV.n_4", "Bgd_Ar.350.MeV.n_8", "Bgd_Ar.350.MeV.n_24", "Bgd_Ar.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
-fe_bdg <- pca(subset[,c("Bgd_Fe.600.MeV.n_4", "Bgd_Fe.600.MeV.n_8", "Bgd_Fe.600.MeV.n_24", "Bgd_Fe.600.MeV.n_48")], nfactors = 1, scale. = TRUE)
 
-si_exp <- pca(subset[,c("FociPerGy_Si.350.MeV.n_4", "FociPerGy_Si.350.MeV.n_8", "FociPerGy_Si.350.MeV.n_24", "FociPerGy_Si.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
-ar_exp <- pca(subset[,c("FociPerGy_Ar.350.MeV.n_4", "FociPerGy_Ar.350.MeV.n_8", "FociPerGy_Ar.350.MeV.n_24", "FociPerGy_Ar.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
-fe_exp <- pca(subset[,c("FociPerGy_Fe.600.MeV.n_4", "FociPerGy_Fe.600.MeV.n_8", "FociPerGy_Fe.600.MeV.n_24", "FociPerGy_Fe.600.MeV.n_48")], nfactors = 1, scale. = TRUE)
+# si_bdg <- pca(subset[,c("Bgd_Si.350.MeV.n_4", "Bgd_Si.350.MeV.n_8", "Bgd_Si.350.MeV.n_24", "Bgd_Si.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+# ar_bdg <- pca(subset[,c("Bgd_Ar.350.MeV.n_4", "Bgd_Ar.350.MeV.n_8", "Bgd_Ar.350.MeV.n_24", "Bgd_Ar.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+# fe_bdg <- pca(subset[,c("Bgd_Fe.600.MeV.n_4", "Bgd_Fe.600.MeV.n_8", "Bgd_Fe.600.MeV.n_24", "Bgd_Fe.600.MeV.n_48")], nfactors = 1, scale. = TRUE)
 
-subset$si_bdg <- as.vector(si_bdg$scores[,1])
-subset$ar_bdg <- as.vector(ar_bdg$scores[,1])
-subset$fe_bdg <- as.vector(fe_bdg$scores[,1])
-subset$si_exp <- as.vector(si_exp$scores[,1])
-subset$ar_exp <- as.vector(ar_exp$scores[,1])
-subset$fe_exp <- as.vector(fe_exp$scores[,1])
+# si_exp <- pca(subset[,c("FociPerGy_Si.350.MeV.n_4", "FociPerGy_Si.350.MeV.n_8", "FociPerGy_Si.350.MeV.n_24", "FociPerGy_Si.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+# ar_exp <- pca(subset[,c("FociPerGy_Ar.350.MeV.n_4", "FociPerGy_Ar.350.MeV.n_8", "FociPerGy_Ar.350.MeV.n_24", "FociPerGy_Ar.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+# fe_exp <- pca(subset[,c("FociPerGy_Fe.600.MeV.n_4", "FociPerGy_Fe.600.MeV.n_8", "FociPerGy_Fe.600.MeV.n_24", "FociPerGy_Fe.600.MeV.n_48")], nfactors = 1, scale. = TRUE)
 
-subset <- subset[, c("si_bdg", "ar_bdg", "fe_bdg", "si_exp", "ar_exp", "fe_exp")]
+# subset$si_bdg <- as.vector(si_bdg$scores[,1])
+# subset$ar_bdg <- as.vector(ar_bdg$scores[,1])
+# subset$fe_bdg <- as.vector(fe_bdg$scores[,1])
+# subset$si_exp <- as.vector(si_exp$scores[,1])
+# subset$ar_exp <- as.vector(ar_exp$scores[,1])
+# subset$fe_exp <- as.vector(fe_exp$scores[,1])
+
+
+# subset <- subset[, c("si_bdg", "ar_bdg", "fe_bdg", "si_exp", "ar_exp", "fe_exp")]
+
+
+si <- pca(subset[,c("Bgd_Si.350.MeV.n_4", "Bgd_Si.350.MeV.n_8", "Bgd_Si.350.MeV.n_24", "Bgd_Si.350.MeV.n_48",
+                    "FociPerGy_Si.350.MeV.n_4", "FociPerGy_Si.350.MeV.n_8", "FociPerGy_Si.350.MeV.n_24", "FociPerGy_Si.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+ar <- pca(subset[,c("Bgd_Ar.350.MeV.n_4", "Bgd_Ar.350.MeV.n_8", "Bgd_Ar.350.MeV.n_24", "Bgd_Ar.350.MeV.n_48",
+                    "FociPerGy_Ar.350.MeV.n_4", "FociPerGy_Ar.350.MeV.n_8", "FociPerGy_Ar.350.MeV.n_24", "FociPerGy_Ar.350.MeV.n_48")], nfactors = 1, scale. = TRUE)
+fe <- pca(subset[,c("Bgd_Fe.600.MeV.n_4", "Bgd_Fe.600.MeV.n_8", "Bgd_Fe.600.MeV.n_24", "Bgd_Fe.600.MeV.n_48",
+                    "FociPerGy_Fe.600.MeV.n_4", "FociPerGy_Fe.600.MeV.n_8", "FociPerGy_Fe.600.MeV.n_24", "FociPerGy_Fe.600.MeV.n_48")], nfactors = 1, scale. = TRUE)
+
+subset$si <- as.vector(si$scores[,1])
+subset$ar <- as.vector(ar$scores[,1])
+subset$fe <- as.vector(fe$scores[,1])
+
+subset <- subset[, c("si", "ar", "fe")]
 
 dsub_set <- subset
 title <- "Lauren"
