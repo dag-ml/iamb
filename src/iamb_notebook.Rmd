@@ -65,7 +65,7 @@ main <- paste0(LIB_PATH, "alwood_LSDS_15.R")
 
 Lauren Dataset
 ```{r}
-main <- paste0(LIB_PATH, "lauren.R")
+main <- paste0(LIB_PATH, "GWAS_lauren.R")
 ```
 
 

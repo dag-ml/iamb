@@ -1,13 +1,13 @@
 # Graphviz plot attributes
 graph_attrs <- list(rankdir = "BT", size = "5,5", bgcolor = "white")
-node_attrs <- list(fontcolor = "black", shape = "circle", style = "filled", fillcolor = "lightyellow")
+node_attrs <- list(fontsize = 32, fontcolor = "black", shape = "circle", style = "filled", fillcolor = "lightyellow")
 edge_attrs <- list(color = "black")
 
 # Plot the DAG
 plot_dag <- function(graph, algo){
     plot_title <- paste0(algo, " 😲🐭 ", title)
     plot(graph, attrs = list(graph = graph_attrs, node = node_attrs, edge = edge_attrs))
-    title(plot_title, line = -4, cex.main = 2)
+    title(plot_title, line = -2, cex.main = 2)
 }
 
 par(mfrow = c(2,2))
