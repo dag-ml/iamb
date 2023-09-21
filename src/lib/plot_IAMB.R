@@ -1,6 +1,6 @@
 # Graphviz plot attributes
 graph_attrs <- list(rankdir = "BT", size = "5,5", bgcolor = "white")
-node_attrs <- list(fontsize = 32, fontcolor = "black", shape = "circle", style = "filled", fillcolor = "lightyellow")
+node_attrs <- list(fontcolor = "black", shape = "circle", style = "filled", fillcolor = "lightyellow")
 edge_attrs <- list(color = "black")
 
 # Plot the DAG

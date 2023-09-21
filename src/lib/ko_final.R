@@ -36,13 +36,15 @@ ko1234 <- merge(ko123,ko4,by="ID",all=T)
 ko1234$k1[is.na(ko12$k1)] <-0
 ko1234$k2[is.na(ko12$k2)] <-0
 ko1234$k3[is.na(ko12$k3)] <-0
-ko1234$k4[is.na(ko12$k4)] <-0
+ko1234$k4[is.na(ko12$k4)] <-0 
 
 # Keep only needed rows
 ko <- ko1234[!(is.na(ko1234$stiffness)),]
-ko$unload <- 0*(ko$PWB=='PWB100')+30*(ko$PWB=="PWB70")+60*(ko$PWB=="PWB40")+80*(ko$PWB =="PWB20")
+# ko$unload <- 0*(ko$PWB=='PWB100')+30*(ko$PWB=="PWB70")+60*(ko$PWB=="PWB40")+80*(ko$PWB =="PWB20")
+ko$unload <- 0*(ko$PWB=='PWB100')+1*(ko$PWB=="PWB20")
 ko$dur <- 7*(ko$duration=='1wk')+14*(ko$duration=='2wk')+28*(ko$duration=='4wk')
 ko <- ko[,c('BVTV','BMD','trab.sep','trab.num','MSBS','OCSBS','BFRBS','load.max','load.fail','unload','dur')]
+
 
 # Transform to numeric
 ko$BVTV <- as.numeric(as.character(ko$BVTV))
@@ -65,9 +67,7 @@ ko$form   <- as.vector(form$scores)
 
 
 #ko <- ko[,c("unload","dur","expose","mass","trab","stren","resorp","form")]
-ko <- ko[,c("unload","expose","mass","trab","stren","resorp","form")]
-
-rm(list=c("mass","trab","form","stren"))
+ko <- ko[,c("unload","mass","trab","stren")]
 
 dsub_set <- ko
-title <- "Ko(4/4)"
+title <- "Ko_Final"

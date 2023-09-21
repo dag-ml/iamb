@@ -23,7 +23,9 @@ glds$mass_epiph <- scale(glds$mass_epiph)
 # glds <- glds[,c("expose","mass","mass_meta","mass_epiph","trab_meta","trab_epiph")]
 glds <- glds[,c("expose","mass","mass_meta","mass_epiph","trab_meta","trab_epiph")]
 
-rm(list=c("mass","trab_epiph","trab_meta"))
+rm(list=c("mass","mass_meta","mass_epiph","trab_meta","trab_epiph"))
 
 dsub_set <- glds
 title <- "Turner GLDS-351"
+
+"mass","mass_metaphysis","mass_epiphysis","trab_metaphysis","trab_epiphysis"

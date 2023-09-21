@@ -1,4 +1,4 @@
-path <- paste0(DATA_PATH, "new/NEW_GLDS-366_GWAS_processed_associations.csv")
+path <- paste0(DATA_PATH, "GLDS-366/PROCESSED_GLDS-366_GWAS_processed_associations.csv")
 ldset <- read.csv(path, header=T, stringsAsFactors=F)
 
 si <- pca(ldset[,c("Bgd_Si.350.MeV.n_4", "Bgd_Si.350.MeV.n_8", "Bgd_Si.350.MeV.n_24", "Bgd_Si.350.MeV.n_48",
@@ -21,5 +21,4 @@ subset$Mitochondrial.M <- as.numeric(subset$Mitochondrial.M)
 subset$Sex.XY <- as.numeric(subset$Sex.XY)
 
 dsub_set <- subset
-
 title <- "Lauren"
